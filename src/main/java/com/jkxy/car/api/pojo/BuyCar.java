@@ -5,6 +5,7 @@ public class BuyCar {
     private String carType;
     private int qty;
     private String carSeries;
+    private String model;
 
     public String getCarName() {
         return carName;
@@ -36,5 +37,13 @@ public class BuyCar {
 
     public void setCarSeries(String carSeries) {
         this.carSeries = carSeries;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 }

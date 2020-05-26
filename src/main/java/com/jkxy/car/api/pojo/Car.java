@@ -7,6 +7,24 @@ public class Car {
     private String carType;
     private String price;
     private String carSeries;
+    private int qty;
+    private String model;
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
 
     public int getId() {
         return id;
@@ -56,6 +74,8 @@ public class Car {
                 ", carType='" + carType + '\'' +
                 ", price='" + price + '\'' +
                 ", carSeries='" + carSeries + '\'' +
+                ",qty='" +qty + '\'' +
+                ",model='" + model + '\''+
                 '}';
     }
 }

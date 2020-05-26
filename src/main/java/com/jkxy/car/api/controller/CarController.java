@@ -2,6 +2,7 @@ package com.jkxy.car.api.controller;
 
 import com.jkxy.car.api.pojo.BuyCar;
 import com.jkxy.car.api.pojo.Car;
+import com.jkxy.car.api.pojo.FuzzyQueryVO;
 import com.jkxy.car.api.service.CarService;
 import com.jkxy.car.api.utils.JSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,6 +84,18 @@ public class CarController {
         carService.buyCar(buyCar);
         return JSONResult.ok();
     }
+
+    /**
+     * 模糊查询车辆
+     * */
+    @PostMapping("query")
+    public JSONResult fuzzyQuery(FuzzyQueryVO fuzzyQueryVO){
+        List<Car> cars = carService.fuzzyQuery(fuzzyQueryVO);
+        return JSONResult.ok(cars);
+    }
+
+
+
     /**
      * 通过id增加
      *
